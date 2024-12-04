@@ -3,9 +3,8 @@ public class Primes {
         // Convert the first argument (args[0]) to an integer
         int n = Integer.parseInt(args[0]);    
         int sum = 0;
-        int percentage = (sum/n) * 100;
 
-
+        System.out.println("Prime numbers up to " +n+":");
         for (int i = 2; i <= n; i++) {
             if (isPrime(i)) {
                 sum +=1;
@@ -15,6 +14,7 @@ public class Primes {
             }
             
         }    
+        int percentage = (sum/n) * 100;
 
         System.out.println("There are " + sum + " primes between 2 and " + n + " (" + percentage + "% are primes)");
 
@@ -25,9 +25,9 @@ public class Primes {
 
         for (int i = 2; i < n; i++) {
             if (n % i == 0) {
-                return false; // If divisible, n is not prime
+                return false; 
             }
         }
-        return true; // If no divisors are found, n is prime
+        return true; 
     }
 }
