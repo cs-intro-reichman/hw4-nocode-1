@@ -17,14 +17,31 @@ public class MyString {
     }
 
     /** Returns the lowercase version of the given string. */
-    public static String lowerCase(String str) {
+    public static String lowerCase(String args) {
         // Replace the following statement with your code
-        return null;
+        char[] arr = args.toCharArray();
+
+        for (int i = 0; i < arr.length; i++) {
+            if (Character.isUpperCase(arr[i])) {
+                arr[i] = Character.toLowerCase(arr[i]);
+            }
+        }
+    
+        return new String(arr);
     }
 
     /** If str1 contains str2, returns true; otherwise returns false. */
-    public static boolean contains(String str1, String str2) {
-        // Replace the following statement with your code
-        return false;
+   /** If str1 contains str2, returns true; otherwise returns false. */
+public static boolean contains(String str1, String str2) {
+    if (str2.isEmpty()) return true;
+
+    for (int i = 0; i <= str1.length() - str2.length(); i++) {
+        if (str1.substring(i, i + str2.length()).equals(str2)) {
+            return true;
+        }
     }
+
+    return false;
+}
+
 }
