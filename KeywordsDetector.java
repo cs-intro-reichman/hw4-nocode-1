@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class KeywordsDetector {
     public static void main(String[] args) {
         String[] sentences = {
@@ -22,5 +25,18 @@ public class KeywordsDetector {
     // If a sentence contains one or more of the kewords, prints it.
     public static void detectAndPrint(String[] sentences, String[] keywords) {
         // Replace this comment with your code
+
+        for (String sentence : sentences) {
+            String[] words = sentence.split("\\s+"); 
+            for (String word : words) {
+                for (String keyword : keywords) {
+                    if (word.toLowerCase().contains(keyword.toLowerCase())) { 
+                        System.out.println(word );
+                    }
+                }
+            }
+        }
+
+
     }
 }
