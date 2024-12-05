@@ -37,6 +37,7 @@ public class ArrCharOps {
      */
     public static char charAt(char[] arr, int index) {
         // Replace the following statement with your code
+        arr[index];
         return 0;
     }
 
@@ -45,6 +46,9 @@ public class ArrCharOps {
      */
     public static boolean equals(char[] arr1, char[] arr2) {
         // Replace the following statement with your code
+        if (arr1 == arr2) {
+            return true;
+        }
         return false;
     }
 
@@ -52,6 +56,9 @@ public class ArrCharOps {
      *  If no such character is found, returns -1.
      */
     public static int indexOf(char[] arr, char ch) {
+        if (arr[0] == ch) {
+            
+        }
         // Replace the following statement with your code
         return -1;
     }
