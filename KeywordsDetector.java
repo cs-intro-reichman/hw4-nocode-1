@@ -31,7 +31,7 @@ public class KeywordsDetector {
             for (String word : words) {
                 for (String keyword : keywords) {
                     if (word.toLowerCase().contains(keyword.toLowerCase())) { 
-                        System.out.println(word );
+                        System.out.println( sentence );
                     }
                 }
             }
